@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ChatbotProvider from "@/components/ChatbotProvider";
+import Script from "next/script";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         {/* Loads Voiceflow embed and exposes window.openChatbot() */}
-        <ChatbotProvider />
         {children}
       </body>
     </html>
